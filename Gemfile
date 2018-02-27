@@ -59,3 +59,5 @@ group :development, :test do
 end
 
 gem 'rsolr', '>= 1.0'
+
+gem "blacklight_advanced_search"
