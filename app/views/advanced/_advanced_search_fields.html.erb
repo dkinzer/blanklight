@@ -1,0 +1,15 @@
+<%- search_fields_for_advanced_search.each do |key, field_def| -%>
+    <!-- To test do two consecuative searches using the "More options" button -->
+    <!-- We should expect op_row lenght to remain constant after but it grows -->
+    <div>
+      <div>Number: <%= params["op_row"].to_a.count %> </div>
+      <%= select_tag("op_row[]", options_for_select({"contains"=> :contains, "is (exact)" => :is, "begins with" => :begins_with}.sort), :class => "form-control" ) %>
+    <div>
+
+  <div class="form-group advanced-search-field">
+      <%= label_tag key, "#{field_def.label }", :class => "col-sm-3 control-label" %>
+      <div class="col-sm-9">
+        <%= text_field_tag key, label_tag_default_for(key), :class => 'form-control' %>
+      </div>
+  </div>
+<%- end -%>
