@@ -1,9 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is intended to be an OOB blacklight project with minimal changes for the purpose of debugging against a highly customized blacklight project.
 
 * Ruby version
 
