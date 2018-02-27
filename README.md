@@ -2,6 +2,12 @@
 
 This is intended to be an OOB blacklight project with minimal changes for the purpose of debugging against a highly customized blacklight project.
 
+* Run with
+
+```
+docker-compose up -d --build
+```
+
 * Ruby version
 
 * System dependencies
