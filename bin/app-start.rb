@@ -19,9 +19,7 @@ File.delete server_pid if File.exist? server_pid
 exec("rails s -p 3000 -b '0.0.0.0'") if fork == nil
 
 # Next, provision with test data.
-# (If we do this first it works, but site will be blank until rails app loads).
-#`rake fortytu:solr:load_fixtures`
-#`rake ingest`
+`rake blacklight:index:seed`
 
 # Wait for rails server to shutdown before stopping the process.
 Process.wait
